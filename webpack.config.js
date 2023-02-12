@@ -1,16 +1,14 @@
 const path = require('path');
-
 module.exports = {
-  entry: './src/index.js',
+  entry:['./src/main.js'],
   mode:"development",
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'Santhoshbundle2.js',
-    publicPath :"/"
-  },
-  devServer:{
-    static: 'dist'
-},
+    path: path.resolve(__dirname, '../dist'),
+    filename: '[name].js'
+ },
+ devServer:{
+static:"dist"
+ },
 module:{
     rules:[
         {
@@ -23,7 +21,27 @@ module:{
                 loader:"css-loader"
             }
         ]
-        }
+        },
+        {
+            test:/\.html$/,
+            use:[
+                {
+                    loader:"file-loader",
+                    options:{
+                        name:"[name].html"
+                    }
+                },
+                {
+                    loader:"extract-loader"
+                },
+                {
+                    loader:"html-loader",
+                }
+            ]
+            }
     ],
 }
+
 };
+
+
