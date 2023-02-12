@@ -6,11 +6,13 @@
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js",
     "build": "webpack --config ./webpack.config.js",
-    "devStart": "react-scripts start"
+    "devStart": "react-scripts start",
+    "dev": "node src/server/main.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/cli": "^7.20.7",
     "@babel/runtime": "^7.20.13",
     "babel-cli": "^6.26.0",
     "babel-plugin-add-module-exports": "^1.0.4",
@@ -20,19 +22,22 @@
     "babel-polyfill": "^6.26.0",
     "btoa": "^1.2.1",
     "css-loader": "^6.7.3",
+    "express": "^4.18.2",
     "extract-loader": "^1.0.1",
     "html-loader": "^0.5.1",
     "loader-utils": "^1.4.2",
     "react-scripts": "^5.0.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-middleware": "^5.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/plugin-transform-runtime": "^7.19.6",
     "@babel/preset-env": "^7.20.2",
-    "babel-core": "^6.26.3",
+    "@babel/register": "^7.18.9",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-preset-env": "^1.7.0",
     "babel-runtime": "^6.26.0",
     "file-loader": "^6.2.0",
