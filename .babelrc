@@ -1,0 +1,17 @@
+{
+"plugins": ["transform-es2015-arrow-functions"]
+}
+
+/*
+
+try this yout get an idea of balel in practicval
+
+D:\trails\webpack>babel src/main.js
+const btoa = require('btoa');
+import "./app.css";
+import "./index.html";
+var a = function () {
+    console.log("hi from babel 2015 plug in ");
+};
+
+*/
