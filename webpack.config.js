@@ -1,6 +1,6 @@
 const path = require('path');
 module.exports = {
-  entry:['./src/main.js'],
+  entry:["core-js/fn/promise",'./src/main.js'], //if u use   entry:["babel-polyfill",'./src/main.js'] bundle size increased, so mention particvular polyfill u want 
   mode:"development",
   output: {
     path: path.resolve(__dirname, './dist'),
