@@ -9,6 +9,21 @@ module.exports = {
     publicPath :"/"
   },
   devServer:{
-    static: './'
+    static: 'dist'
+},
+module:{
+    rules:[
+        {
+        test:/\.css$/,
+        use:[
+            {
+                loader:"style-loader"
+            },
+            {
+                loader:"css-loader"
+            }
+        ]
+        }
+    ],
 }
 };
