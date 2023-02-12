@@ -1,8 +1,20 @@
 {
-"plugins": ["transform-es2015-arrow-functions","async-to-promises"]}
+    "presets": [
+       [ 
+        "@babel/preset-env",       
+        {
+        "targets":{
+            "browsers":["last 2 versions"]
+        },
+        "debug":true
+       }
+
+        ]
+    ],
+    "plugins":["transform-runtime"]
+}
 
 /*
-
 try this yout get an idea of balel in practicval
 
 D:\trails\webpack>babel src/main.js
@@ -12,5 +24,16 @@ import "./index.html";
 var a = function () {
     console.log("hi from babel 2015 plug in ");
 };
+*/
+
+/*
+instaed of using this 
+
+{
+"plugins": ["transform-es2015-arrow-functions","async-to-promises"]
+}
+
+babel-preset automatically downoload those and extra plugins in preset mode with debug true 
+
 
 */
